@@ -2,17 +2,22 @@
   <body>
     <h1>Sumador</h1>
 
+      <p>
+        <label for="Monto">Monto:</label>
+        <input type="number" id="monto" min = 0 oninput="validity.valid||(value='');"/>
+      </p>
+      <p>
+        <label for="Titulo">Titulo:</label>
+        <input type="text" id="titulo"/>
+      </p>
+      <p>
+        <label for="detalles">Detalles:</label>
+        <textarea id="detalles" name="w3review" rows="4" cols="50"></textarea>
+      </p>
 
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <br>
+      <button type="button" id="registro">Registrar</button>
+      <div id = "resultado-div"></div>
 
-      <button type="button" id="suma">Sumar</button>
-      <button type="button" id="multiplicacion">multiplicar</button>
-    <div id="resultado-div"></div>
-    <div id="resultado-mult-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
