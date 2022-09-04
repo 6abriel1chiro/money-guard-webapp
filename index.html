@@ -1,19 +1,40 @@
 <html>
   <body>
-    <h1>Sumador</h1>
+      <div class="wrapper">
+        <div class="app-wrapper">
+    
+          <!--Wallet-->
+          <aside class="wallet">
+            <h2>Pocket Guard</h2>
+            <div class="first-form">
+              <form class="base-form">
+                <input type="text" placeholder="username"/>
+                <p for="initial-balance">Initial Balance</p>
+                <input type="number" step="0.01" id="initBalance">                <button>ok</button>
+                
+              </form>
+            </div>
+          </aside>
+    
+          <content class="transactions-wrapper">
+            <h2>
+              Current Balance
+              <span class="total-balance"></span>
+            </h2>
+            <div class="transactions"></div>
+          </content>
+    
+        </div>
+    
+      </div>
 
-
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <br>
-
-      <button type="button" id="suma">Sumar</button>
-      <button type="button" id="multiplicacion">multiplicar</button>
-    <div id="resultado-div"></div>
-    <div id="resultado-mult-div"></div>
-
+    
+    </body>
     <script type="module" src="./src/presenter.js"></script>
-  </body>
+    <script type="module" src="./src/wallet.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://use.fontawesome.com/2241a12979.js"></script>
+
+
 </html>
