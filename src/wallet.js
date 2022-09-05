@@ -11,4 +11,23 @@ function sumBalance(monto, total)
     return total;
 }
 
-export  {getHistorial,sumBalance};
+function subBalance(monto, total)
+{
+    total -= monto;
+    return total;
+}
+
+function checkRadioButton(value, monto, total)
+{
+    if (value == "ingreso")
+    {
+        total = sumBalance(monto, total)
+    }
+    else
+    {
+        total = subBalance(monto, total)
+    }
+    return total;
+}
+
+export  {getHistorial,sumBalance, checkRadioButton, subBalance};

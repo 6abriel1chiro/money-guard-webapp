@@ -9,6 +9,12 @@
             <div id="user-Div">
               <form id="first-form">
                 <p for="transaction">Register a transaction</p>
+
+                <input type="radio"  name="transaction_type" value="ingreso">
+                <label for="ingreso">Ingreso</label><br>
+                <input type="radio"  name="transaction_type" value="egreso">
+                <label for="egreso">Egreso</label><br>
+
                 <p> Monto: </p>
                 <input type="number" step="0.10" min = 0 oninput="validity.valid||(value='');" id="transaction">
                 <p> Titulo: </p>
