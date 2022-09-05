@@ -1,20 +1,24 @@
-const monto = document.querySelector("#monto");
-const titulo = document.querySelector("#titulo");
-const detalles = document.querySelector('#detalles');
-const categoria = document.querySelector('#categorias');
+//import sumar from "./sumador";
+let balance = document.querySelector("#initBalance");
+let username = document.querySelector("#username");
 
-const button_registro = document.getElementById("registro");
+const span = document.querySelector("#total");
+const userDiv = document.querySelector("#user-Div");
+const form = document.querySelector("#first-form");
 
-const div = document.querySelector("#resultado-div");
 
-
-button_registro.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const valueMonto = Number.parseInt(monto.value);
-  
-  div.innerHTML = "<p>" + "Transacción: " + titulo.value + "</p>" +
-    "<p>" + "Monto: " + valueMonto + "$ </p>" +
-    "<p>" + "Categoria: " + categorias.value + "</p>" +
-    "<p>" + "detalles: " + detalles.value + "</p>";
+   balance = Number.parseFloat(balance.value);
+   username =username.value.toString();
+  console.log(username,balance)
+
+  span.innerHTML =  balance;
+
+  form.style.display="none";
+  userDiv.innerHTML =  "<h2>" + "Welcome: " + username + "</h2>";
+
+
+
 });

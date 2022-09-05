@@ -1,35 +1,41 @@
 <html>
   <body>
-    <h1>Sumador</h1>
+      <div class="wrapper">
+        <div class="app-wrapper">
+    
+          <!--Wallet-->
+          <aside class="wallet">
+            <h2>Pocket Guard</h2>
+            <div id="user-Div">
+              <form id="first-form">
+                <input type="text" placeholder="username" id="username"/>
+                <p for="initial-balance">Enter your initial Balance</p>
+                <input type="number" step="0.10" id="initBalance">    <input id= "firstSetup" type="submit" value="ok">
 
-      <p>
-        <label for="Monto">Monto:</label>
-        <input type="number" id="monto" min = 0 oninput="validity.valid||(value='');"/>
-      </p>
-      <p>
-        <label for="Titulo">Titulo:</label>
-        <input type="text" id="titulo"/>
-      </p>
+                
+              </form>
+            </div>
+          </aside>
+    
+          <content class="transactions-wrapper">
+            <h2>
+              Current Balance:
+              <span id="total"></span>
+            </h2>
+            <div class="transactions" id="transactions-list"></div>
+          </content>
+    
+        </div>
+    
+      </div>
 
-      <p>
-        <label for="Categoria">Categoria:</label>
-        <select name="categorias" id="categorias">
-          <option value="Business">Business</option>
-          <option value="Loan">Loan</option>
-          <option value="Insurance">Insurance</option>
-          <option value="Rent">Rent</option>
-        </select>
-      </p>
-
-      <p>
-        <label for="detalles">Detalles:</label>
-        <textarea id="detalles" rows="4" cols="50"></textarea>
-      </p>
-
-      <button type="button" id="registro">Registrar</button>
-      <div id = "resultado-div"></div>
-
-
+    
+    </body>
     <script type="module" src="./src/presenter.js"></script>
-  </body>
+    <script type="module" src="./src/wallet.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://use.fontawesome.com/2241a12979.js"></script>
+
+
 </html>
