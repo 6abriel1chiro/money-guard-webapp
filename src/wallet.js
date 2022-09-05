@@ -30,4 +30,15 @@ function checkRadioButton(value, monto, total)
     return total;
 }
 
-export  {getHistorial,sumBalance, checkRadioButton, subBalance};
+function generateTransactionList(arg)
+{
+let transactions = "";
+for (let index = 0; index < arg.length; index++) {
+     transactions += `<li>${arg[index]}</li>`;
+    
+}
+return transactions;
+
+}
+
+export  {getHistorial,sumBalance, checkRadioButton, subBalance,generateTransactionList};
