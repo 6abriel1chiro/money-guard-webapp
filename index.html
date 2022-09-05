@@ -6,11 +6,12 @@
           <!--Wallet-->
           <aside class="wallet">
             <h2>Pocket Guard</h2>
-            <div class="first-form">
-              <form class="base-form">
-                <input type="text" placeholder="username"/>
-                <p for="initial-balance">Initial Balance</p>
-                <input type="number" step="0.01" id="initBalance">                <button>ok</button>
+            <div id="user-Div">
+              <form id="first-form">
+                <input type="text" placeholder="username" id="username"/>
+                <p for="initial-balance">Enter your initial Balance</p>
+                <input type="number" step="0.10" id="initBalance">    <input id= "firstSetup" type="submit" value="ok">
+
                 
               </form>
             </div>
@@ -18,10 +19,10 @@
     
           <content class="transactions-wrapper">
             <h2>
-              Current Balance
-              <span class="total-balance"></span>
+              Current Balance:
+              <span id="total"></span>
             </h2>
-            <div class="transactions"></div>
+            <div class="transactions" id="transactions-list"></div>
           </content>
     
         </div>
