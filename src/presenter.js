@@ -1,24 +1,44 @@
-//import sumar from "./sumador";
-let balance = document.querySelector("#initBalance");
-let username = document.querySelector("#username");
+import {getHistorial,sumBalance} from "./wallet";
 
+//import sumar from "./sumador";
+let amount = document.querySelector("#transaction");
+let title = document.querySelector("#title");
+let details = document.querySelector("#details");
+let category = document.querySelector("#category");
+
+const register = document.querySelector("#register")
 const span = document.querySelector("#total");
 const userDiv = document.querySelector("#user-Div");
+let transDiv = document.getElementById("transactions-list")
 const form = document.querySelector("#first-form");
+span.value = 0;
 
-
-form.addEventListener("submit", (event) => {
+register.addEventListener("click", (event) => {
   event.preventDefault();
 
-   balance = Number.parseFloat(balance.value);
-   username =username.value.toString();
-  console.log(username,balance)
+  const monto = Number.parseFloat(amount.value);
 
-  span.innerHTML =  balance;
+  
+  transDiv.innerHTML = "<p> Monto: "+ monto +"</p>"+
+  "<p> titulo: "+title.value.toString() +"</p>"+
+  "<p> category: "+category.value.toString() +"</p>"+
+  "<p> details: "+details.value.toString() +"</p>";
+  console.log(span.value)
+  span.value = sumBalance(monto, span.value);
+  span.innerHTML =  span.value;
 
-  form.style.display="none";
-  userDiv.innerHTML =  "<h2>" + "Welcome: " + username + "</h2>";
+  //transactions = getHistorial(monto, title.value.toString(), category.value.toString(), details.value.toString());
 
+  /*for (let keys in transactions) {
+    pAmount = transactions[keys].amount;
+     = transactions[keys].title;
+    transDiv.innerText = transactions[keys].category;
+    transDiv.innerText = transactions[keys].details;
+  }*/
 
-
+    /*for (let keys in transactions) {
+    const div = document.createElement("div");
+    div.innerText = prod_obj[keys].title
+    document.body.appendChild(div)
+  } */
 });

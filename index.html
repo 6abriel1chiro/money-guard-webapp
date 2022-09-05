@@ -8,22 +8,30 @@
             <h2>Pocket Guard</h2>
             <div id="user-Div">
               <form id="first-form">
-                <input type="text" placeholder="username" id="username"/>
-                <p for="initial-balance">Enter your initial Balance</p>
-                <input type="number" step="0.10" id="initBalance">    <input id= "firstSetup" type="submit" value="ok">
+                <p for="transaction">Register a transaction</p>
+                <p> Monto: </p>
+                <input type="number" step="0.10" min = 0 oninput="validity.valid||(value='');" id="transaction">
+                <p> Titulo: </p>
+                <input type="text" id = "title">
+                <p> Categoria: </p>
+                <input type="text" id = "category">
+                <p> Detalles: </p>
+                <textarea id = "details"></textarea>
+                <p></p>
+                <button type="button" id = "register">register</button>
 
                 
               </form>
             </div>
           </aside>
     
-          <content class="transactions-wrapper">
+          <section class="transactions-wrapper">
             <h2>
-              Current Balance:
-              <span id="total"></span>
+              Current Balance: 
+              <span id="total">0</span>
             </h2>
             <div class="transactions" id="transactions-list"></div>
-          </content>
+          </section>
     
         </div>
     
