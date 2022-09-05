@@ -17,7 +17,6 @@ span.value = 0;
 register.addEventListener("click", (event) => {
   event.preventDefault();
   var radio = document.querySelector('input[name="transaction_type"]:checked').value;
-
   const monto = Number.parseFloat(amount.value);
   
 
