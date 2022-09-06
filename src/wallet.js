@@ -1,5 +1,6 @@
+let trans = []
+
 function getHistorial(monto, titulo, categoria, detalles){
-    let trans = []
     let dict = {amount: monto, title: titulo, category: categoria, details: detalles};
     trans.push(dict);
     return trans;
@@ -33,8 +34,11 @@ function checkRadioButton(value, monto, total)
 function generateTransactionList(arg)
 {
 let transactions = "";
-for (let index = 0; index < arg.length; index++) {
-     transactions += `<li>${arg[index]}</li>`;
+for(let arrIndex = 0; arrIndex <arg.length; arrIndex++){
+    for (let index = 0; index < Object.keys(arg[arrIndex]).length; index++) {
+        console.log(Object.keys(arg)[index])
+        transactions += `${Object.values(arg[arrIndex])[index]}`;  
+    }
     
 }
 return transactions;
