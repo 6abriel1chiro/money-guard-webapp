@@ -38,9 +38,16 @@ for(let arrIndex = 0; arrIndex <arg.length; arrIndex++){
 
     for (let index = 0; index < Object.keys(arg[arrIndex]).length; index++) {
         console.log(Object.keys(arg)[index])
+        if(Object.values(arg[arrIndex])[index] == "")
+        {
+            transactions+= "<li>empty</li>";
+        }
+        else{
         transactions += ` <li>${    Object.values(arg[arrIndex])[index]}</li>`;  
     }
-    transactions += '<li style="list-style:none;">&nbsp;</li>'
+
+    }
+    transactions += '<div>&nbsp;</div>'
 }
 return transactions;
 
