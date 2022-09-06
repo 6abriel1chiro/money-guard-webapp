@@ -31,9 +31,9 @@ register.addEventListener("click", (event) => {
   transactions = getHistorial(monto, title.value.toString(), category.value.toString(), details.value.toString());
   console.log(transactions);
   document.querySelector("#transactions-list").innerHTML = `
-  
+
   ${generateTransactionList(transactions)}
-  
+
   `;
 
 });

@@ -35,11 +35,12 @@ function generateTransactionList(arg)
 {
 let transactions = "";
 for(let arrIndex = 0; arrIndex <arg.length; arrIndex++){
+
     for (let index = 0; index < Object.keys(arg[arrIndex]).length; index++) {
         console.log(Object.keys(arg)[index])
-        transactions += `${Object.values(arg[arrIndex])[index]}`;  
+        transactions += ` <li>${    Object.values(arg[arrIndex])[index]}</li>`;  
     }
-    
+    transactions += '<li style="list-style:none;">&nbsp;</li>'
 }
 return transactions;
 
