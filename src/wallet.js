@@ -35,19 +35,25 @@ function generateTransactionList(arg)
 {
 let transactions = "";
 for(let arrIndex = 0; arrIndex <arg.length; arrIndex++){
+    transactions+= "<li>";
 
     for (let index = 0; index < Object.keys(arg[arrIndex]).length; index++) {
-        console.log(Object.keys(arg)[index])
+
+        console.log(Object.keys(arg)[index]);
+
         if(Object.values(arg[arrIndex])[index] == "")
         {
-            transactions+= "<li>empty</li>";
+            transactions+= "<div>empty</div>";
         }
         else{
-        transactions += ` <li>${    Object.values(arg[arrIndex])[index]}</li>`;  
-    }
+        transactions += ` <div>${    Object.values(arg[arrIndex])[index]}</div>`;  
+         }
 
     }
-    transactions += '<div>&nbsp;</div>'
+    
+    transactions+= '<div>&nbsp;</div>';
+    transactions+= "</li>";
+
 }
 return transactions;
 
