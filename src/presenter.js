@@ -1,4 +1,4 @@
-import {getHistorial,sumBalance, checkRadioButton, subBalance} from "./wallet";
+import {getHistorial,sumBalance, checkRadioButton, subBalance,generateTransactionList} from "./wallet";
 
 //import sumar from "./sumador";
 let amount = document.querySelector("#transaction");
@@ -28,19 +28,12 @@ register.addEventListener("click", (event) => {
   
   span.value = checkRadioButton(radio, monto, span.value);
   span.innerHTML =  span.value;
+  transactions = getHistorial(monto, title.value.toString(), category.value.toString(), details.value.toString());
+  console.log(transactions);
+  document.querySelector("#transactions-list").innerHTML = `
+  <ol>
+  ${generateTransactionList(transactions)}
+  </ol>
+  `;
 
-  //transactions = getHistorial(monto, title.value.toString(), category.value.toString(), details.value.toString());
-
-  /*for (let keys in transactions) {
-    pAmount = transactions[keys].amount;
-     = transactions[keys].title;
-    transDiv.innerText = transactions[keys].category;
-    transDiv.innerText = transactions[keys].details;
-  }*/
-
-    /*for (let keys in transactions) {
-    const div = document.createElement("div");
-    div.innerText = prod_obj[keys].title
-    document.body.appendChild(div)
-  } */
 });
