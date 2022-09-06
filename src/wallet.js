@@ -46,7 +46,7 @@ for(let arrIndex = 0; arrIndex <arg.length; arrIndex++){
             transactions+= "<div>empty</div>";
         }
         else{
-        transactions += ` <div>${    Object.values(arg[arrIndex])[index]}</div>`;  
+        transactions += ` <div>${Object.keys(arg[arrIndex])[index]} : ${Object.values(arg[arrIndex])[index]}</div>`;  
          }
 
     }
